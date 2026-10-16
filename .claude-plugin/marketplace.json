@@ -1,0 +1,12 @@
+{
+  "name": "agent-replay",
+  "owner": { "name": "rathialok901", "url": "https://github.com/rathialok901" },
+  "description": "Session replay and recap tools for AI coding agents.",
+  "plugins": [
+    {
+      "name": "agent-replay",
+      "source": "./",
+      "description": "Replay, summarize and extract key findings from AI coding agent sessions as shareable HTML."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "agent-replay",
+  "version": "0.2.0",
+  "description": "Replay, summarize and extract key findings from AI coding agent sessions (Claude Code, Codex, Gemini CLI, Aider) as shareable HTML.",
+  "author": { "name": "rathialok901", "url": "https://github.com/rathialok901" },
+  "homepage": "https://github.com/rathialok901/agent-replay",
+  "repository": "https://github.com/rathialok901/agent-replay",
+  "license": "MIT",
+  "keywords": ["replay", "recap", "postmortem", "transcript", "troubleshooting"]
+}

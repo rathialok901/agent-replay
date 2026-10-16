@@ -1,0 +1,39 @@
+{
+  "sessionId": "gem-demo-1",
+  "projectHash": "abc123",
+  "startTime": "2026-10-16T12:00:00.000Z",
+  "lastUpdated": "2026-10-16T12:00:20.000Z",
+  "messages": [
+    { "id": "m1", "timestamp": "2026-10-16T12:00:00.000Z", "type": "user", "content": "Why is the build so slow?" },
+    {
+      "id": "m2",
+      "timestamp": "2026-10-16T12:00:05.000Z",
+      "type": "gemini",
+      "model": "gemini-3-pro",
+      "content": "Let me check the bundler config.",
+      "thoughts": [{ "subject": "Plan", "description": "Look for source maps in production builds." }],
+      "tokens": { "input": 5000, "output": 120, "cached": 3000, "thoughts": 40, "tool": 0, "total": 5160 },
+      "toolCalls": [
+        {
+          "id": "tc1",
+          "name": "read_file",
+          "displayName": "ReadFile",
+          "args": { "absolute_path": "/home/dev/web/vite.config.js" },
+          "status": "success",
+          "timestamp": "2026-10-16T12:00:06.000Z",
+          "result": [{ "functionResponse": { "id": "tc1", "name": "read_file", "response": { "output": "export default { build: { sourcemap: true } }" } } }]
+        },
+        {
+          "id": "tc2",
+          "name": "run_shell_command",
+          "displayName": "Shell",
+          "args": { "command": "npm run build" },
+          "status": "error",
+          "timestamp": "2026-10-16T12:00:10.000Z",
+          "resultDisplay": "Error: out of memory"
+        }
+      ]
+    },
+    { "id": "m3", "timestamp": "2026-10-16T12:00:20.000Z", "type": "gemini", "model": "gemini-3-pro", "content": "Source maps are on for production; disabling them should help.", "tokens": { "input": 6000, "output": 60, "cached": 5000 } }
+  ]
+}

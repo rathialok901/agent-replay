@@ -1,0 +1,12 @@
+{
+  "type": "troubleshooting",
+  "title": "Fixing the failing toggle test",
+  "tldr": "The `toggles completion` test failed because `toggle` wrote the wrong field; renaming it fixed the suite [#7].",
+  "sections": [
+    { "heading": "Symptom", "items": ["`npm test` failed: expected `true`, received `undefined` [#3]"] },
+    { "heading": "Root cause", "items": ["`toggle` set `todo.done` while the test reads `todo.completed` [#4] [#5]"] },
+    { "heading": "Fix", "items": ["Changed the assignment to `todo.completed = !todo.completed` [#6]"] },
+    { "heading": "Commands that worked", "items": ["`npm test` [#7]"] },
+    { "heading": "Verification", "items": ["Suite passes after the edit [#7]"] }
+  ]
+}

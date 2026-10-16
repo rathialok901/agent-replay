@@ -1,0 +1,23 @@
+{
+  "name": "agent-replay",
+  "version": "0.1.0",
+  "description": "Turn an AI coding agent transcript into a shareable, searchable HTML timeline.",
+  "bin": {
+    "agent-replay": "bin/agent-replay.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": ["claude-code", "ai-agents", "transcript", "replay", "llm", "devtools"],
+  "author": "rathialok901 (https://github.com/rathialok901)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rathialok901/agent-replay.git"
+  },
+  "homepage": "https://github.com/rathialok901/agent-replay#readme",
+  "license": "MIT"
+}
